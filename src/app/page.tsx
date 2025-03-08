@@ -1,13 +1,12 @@
-import ButtonBar from "@/components/ButtonBar";
+"use client";
 
 export default function Home() {
 
 
   return (
     <div>
-      StepLy
-
-      <ButtonBar/>
+      {/* <Header /> */}
     </div>
+    
   );
 }
