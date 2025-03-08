@@ -22,3 +22,23 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  margin: 0;
+}
+
+.rectangle {
+  width: 65%; 
+  height: 65%; 
+  border: 5px solid white; 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 24px;
+  border-radius: 15px;
+}
