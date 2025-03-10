@@ -22,3 +22,23 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Moves these styles to the button bar component
+  .buttonBarContainer {
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  width: 50%;
+  border: 1px solid #C6C6C6;
+  border-radius: 2em;
+  padding: 2px 0 2px 0;
+} */
+
+.buttonBar {
+  cursor: pointer;
+}
+
+.buttonBar:hover {
+  cursor: pointer;
+  background-color: #c6c6c6;
+}
