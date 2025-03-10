@@ -1,8 +1,12 @@
+"use client";
 
 export default function Home() {
+
+
   return (
     <div>
-      StepLy
+      {/* <Header /> */}
     </div>
+    
   );
 }
