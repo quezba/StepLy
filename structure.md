@@ -1,7 +1,9 @@
-# Project Structure - Next.js Boilterplate
+# **Project Structure - Next.js Boilterplate**
+------
 
 This document outlines the standard folder structure for our Next.js project
 
+```
 /src
  ├── /app
  │    ├── /page.js
@@ -22,3 +24,4 @@ This document outlines the standard folder structure for our Next.js project
  ├── /lib
  └── /utils
 
+```
