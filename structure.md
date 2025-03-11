@@ -6,10 +6,21 @@ This document outlines the standard folder structure for our Next.js project
 ```
 /src
  ├── /app
- │    ├── /page.js
- │    ├── /layout.js
+ │    ├── /page.tsx
+ │    ├── /layout.tsx
  │    ├── /dashboard
- │    │    └── /page.tsx
+ │    │      ├── /layout.tsx
+ │    │      └── /[slug]
+ │    │            └── /page.tsx
+ │    ├── /api
+ │    │     ├─  /users
+ │    │     │   └── /[userId]
+ │    │     │           └── /route.ts
+ │    │     └── /data
+ │    │           └── /[dataID]
+ │    │                 └── /route.ts
+ │    ├── /not-found.tsx
+ │    └── /loading.tsx
  │
  ├── /components
  │    ├── ButtonBar.tsx
@@ -17,11 +28,12 @@ This document outlines the standard folder structure for our Next.js project
  │    └── playerFrame.tsx
  │
  ├── /public
- │    ├── sampleImages
+ │    └── sampleImages
  │        └── screenshot.png
  ├── /styles
- │    ├── globals.css
+ │     └── /globals.css
  ├── /lib
+ │    └── /middleware.ts
  └── /utils
 
 ```
