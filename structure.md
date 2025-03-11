@@ -8,7 +8,7 @@ This document outlines the standard folder structure for our Next.js project
  ├── /app
  │    ├── /page.tsx
  │    ├── /layout.tsx
- │    ├── /dashboard
+ │    ├── /tutorial_animation_player
  │    │      ├── /layout.tsx
  │    │      └── /[slug]
  │    │            └── /page.tsx
