@@ -4,7 +4,7 @@
 export default function Header() {
   return (
     <div className="flex justify-center items-center w-screen h-screen">
-      <div className="flex justify-center items-center w-[90%] h-[85%]">
+      <div className="flex justify-center items-center w-[95%] h-[95%]">
         <img
           src="/images/oracle.png"
           alt="platform screenshot for tutorial"
