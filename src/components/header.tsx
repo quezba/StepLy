@@ -16,16 +16,22 @@ export default function Header() {
     fetchImage();
   }, []);
   
+
+type HeaderProps = {
+  currentImage: string;
+};
+
+export default function Header({ currentImage }: HeaderProps) {
   return (
-    <div className="flex justify-center items-center w-screen h-screen">
-      <div className="flex justify-center items-center w-[90%] h-[85%]">
+    <div className="flex justify-center items-center w-full h-full overflow-hidden">
+      <div className="relative w-[90%] h-[675px] overflow-hidden">
         <img
           src={img}
+          src={currentImage}
           alt="platform screenshot for tutorial"
-          className="w-full h-full object-contain" // using object-contain to make sure the image fits the container and doesn't stretch
+          className="w-auto h-full object-contain"
         />
       </div>
-
     </div>
   );
 }
