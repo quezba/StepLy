@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import ButtonBar from "@/components/ButtonBar";
 import ImageSlider from "@/components/slider";
 
 const geistSans = Geist({
@@ -30,7 +29,6 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         {children}
-        <ButtonBar />
         <ImageSlider/>
       </body>
       
