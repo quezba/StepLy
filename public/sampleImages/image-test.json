@@ -1,0 +1,11 @@
+{
+    "name": "Test-tutorial",
+
+    "image_list": [
+        "/sampleImages/oracle0.png",
+        "/sampleImages/oracle1.png",
+        "/sampleImages/oracle2.png",
+        "/sampleImages/oracle3.png",
+        "/sampleImages/oracle4.png"
+    ]
+}

@@ -4,18 +4,17 @@ import { useEffect, useState } from "react";
 import PlayerFrame from "./playerframe";
 import ButtonBar from "./ButtonBar";
 
-const images = [
-  "/sampleImages/oracle0.png",
-  "/sampleImages/oracle1.png",
-  "/sampleImages/oracle2.png",
-  "/sampleImages/oracle3.png",
-  "/sampleImages/oracle4.png",
-];
-
 export default function ImageSlider() {
+  const [images, setImages] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(true);
+  const [isPlaying, setIsPlaying] = useState(false);
 
+  useEffect(() => {
+    fetch("/sampleImages/image-test.json")
+      .then(res => res.json())
+      .then((data) => setImages(data.image_list))
+  }, [])
+  
   // progress the slider
   useEffect(() => {
     if (!isPlaying || currentIndex >= images.length - 1) return;
