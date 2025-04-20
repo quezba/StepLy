@@ -15,16 +15,17 @@ datasource db {
 }
 
 model user {
-  id String @id @default(uuid())
+  id    String @id @default(uuid())
   email String @unique
-  Name String
+  Name  String
   group Int
 }
 
 model Image {
   id        Int     @id @default(autoincrement())
-  path     String
-  group   Int?
+  path      String
+  dimension Json? // coodrinate object
+  group     Int?
   authorId  Int
   author    User    @relation(fields: [authorId], references: [id])
 }
