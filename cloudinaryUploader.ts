@@ -13,14 +13,14 @@ cloudinary.config({
 
 
 // Function to upload
-async function uploadLocalFile(localFilePath: string, publicId: string) {
+async function uploadLocalFile(localFilePath: string, publicId: string): Promise<void> {
   try {
 
     // 1. Check if image already exists
     const existing = await cloudinary.api.resource(publicId).catch(() => null);
     if (existing) {
       console.log(`⚠️ Skipping duplicate: ${publicId}`);
-      return existing.secure_url;
+      return;
     }
 
     // 2. Upload
@@ -47,8 +47,4 @@ async function uploadLocalFile(localFilePath: string, publicId: string) {
     throw error;
   }
 }
-
-// Example usage
-const filePath = path.join(__dirname, 'images', 'your-image.jpg'); // your local file
-uploadLocalFile(filePath).catch(console.error);
 
