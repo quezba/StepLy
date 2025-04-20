@@ -13,3 +13,18 @@ datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
 }
+
+model user {
+  id String @id @default(uuid())
+  email String @unique
+  Name String
+  group Int
+}
+
+model Image {
+  id        Int     @id @default(autoincrement())
+  path     String
+  group   Int?
+  authorId  Int
+  author    User    @relation(fields: [authorId], references: [id])
+}

@@ -36,4 +36,16 @@ This document outlines the standard folder structure for our Next.js project
  │    └── /middleware.ts
  └── /utils
 
+
+
+
+/scripts
+  ├── upload.ts                  ← your upload script
+  ├── serviceAccountKey.json     ← Firebase Admin SDK credentials
+  ├── /images                    ← local images to upload
+
 ```
+
+### compile typscript
+tsc scripts/upload.ts # will generate a compiled file in dist folder
+node dist/upload.js # run script
