@@ -11,7 +11,7 @@ const prisma = new PrismaClient();
 // Initialize Firebase Admin
 initializeApp({
   credential: cert(require('./serviceAccountKey.json')),
-  storageBucket: 'your-project-id.appspot.com', // replace with your actual bucket
+  storageBucket: process.env.FIREBASE_STORAGE_, // replace with your actual bucket
 });
 
 const bucket = getStorage().bucket();
