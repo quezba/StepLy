@@ -1,6 +1,6 @@
 import { readdirSync } from 'fs';
 import path from 'path';
-import { uploadLocalFile } from './cloudinaryUploader';
+import { uploadLocalFile } from './upload';
 import * as dotenv from 'dotenv';
 dotenv.config();
 
